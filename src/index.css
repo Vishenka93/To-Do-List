@@ -40,7 +40,7 @@ body {
     cursor: pointer;
 }
 .button:hover {
-    background-color: rgba(143, 161, 241, 0.762);
+    background-color: rgb(42, 77, 232);
     transition: all 0.3s ease 0s;
 }
 
@@ -64,16 +64,31 @@ body {
     height: 50px;
     border-radius: 5px;
     cursor: pointer;
-    background-color: rgba(255, 0, 0, 0.521);
+    background-color: rgba(255, 255, 255, 0.521);
     transition: all 0.3s ease 0s;
 }
 .tab-button:hover {
-    background-color: rgba(255, 0, 0, 0.725);
+    background-color: rgba(143, 161, 241, 0.981);
     transition: all 0.3s ease 0s;
 }
 
-.activ {
-    background-color: blue;
+.tab-button-delete {
+    padding: 10px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.237);
+    transition: all 0.3s ease 0s;
+}
+.tab-button-delete:hover {
+    background-color: rgb(255, 0, 0);
+}
+.activ-tab {
+    background-color: rgb(42, 77, 232);
+    padding: 10px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .word {
@@ -85,3 +100,58 @@ body {
     border-radius: 5px;
     font-size: 20px;
 }
+
+.checkbox {
+    margin-right: 25px;
+    font-size: 16px;
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+    padding-left: 70px;
+    transition: all 0.3s ease 0s;
+}
+
+.checkbox::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -5px;
+    width: 50px;
+    height: 25px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 3px rgb(217, 212, 212);
+    transition: all 0.3s ease 0s;
+}
+.checkbox::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: -2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(42, 77, 232);
+    box-shadow: 0 0 3px rgb(42, 77, 232);
+    transition: all 0.3s ease 0s;
+}
+
+.checkbox:checked::before {
+    background-color: rgb(87, 245, 87);
+    transition: all 0.3s ease 0s;
+}
+input[type="checkbox"].checkbox:checked::after {
+    background-color: rgb(1, 84, 1);
+    left: 23px;
+    content: "";
+    position: absolute;
+    top: 0px;
+    transition: all 0.3s ease 0s;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+/* input[type="checkbox"].checkbox {
+    display: none;
+} */

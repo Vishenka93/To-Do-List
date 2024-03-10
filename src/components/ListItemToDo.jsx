@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 function ListItemToDo({
     id,
     check,
@@ -7,7 +9,6 @@ function ListItemToDo({
     handleDeleteToDo,
     handleRestore,
 }) {
-    console.log(isDeleted);
     return (
         <div
             className="word"
@@ -17,15 +18,18 @@ function ListItemToDo({
         >
             {!isDeleted && (
                 <input
+                    className={"checkbox"}
                     checked={check}
                     type="checkbox"
-                    onChange={() => handleCheckToDo(id)}
+                    onChange={() => {
+                        handleCheckToDo(id);
+                    }}
                 />
             )}
 
             <p>{name}</p>
             <button
-                className="tab-button"
+                className="tab-button-delete "
                 onClick={() => {
                     if (isDeleted) {
                         handleRestore(id);

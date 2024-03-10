@@ -6,9 +6,9 @@ function Tabs({ currentTab, setCurrentTab }) {
         <div className="tab">
             {tabsToDO.map((el) => (
                 <button
-                    className="tab-button"
+                    className={currentTab === el ? "activ-tab" : "tab-button"}
                     onClick={() => setCurrentTab(el)}
-                    style={getTabBtnStyle(currentTab, el)}
+                    // style={getTabBtnStyle(currentTab, el)}
                     key={el}
                 >
                     {el}
