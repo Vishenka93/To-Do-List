@@ -119,11 +119,19 @@ body {
     width: 50px;
     height: 25px;
     border-radius: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 3px rgb(217, 212, 212);
     transition: all 0.3s ease 0s;
 }
-.checkbox::after {
+
+.checkbox.non-checked-checkbox::before {
+    background-color: #fff;
+    box-shadow: 0 0 3px rgb(217, 212, 212);
+}
+
+.checkbox.checked-checkbox::before {
+    background-color: rgb(87, 245, 87);
+}
+
+.checkbox.non-checked-checkbox::after {
     content: "";
     position: absolute;
     top: 0px;
@@ -136,11 +144,7 @@ body {
     transition: all 0.3s ease 0s;
 }
 
-.checkbox:checked::before {
-    background-color: rgb(87, 245, 87);
-    transition: all 0.3s ease 0s;
-}
-input[type="checkbox"].checkbox:checked::after {
+.checkbox.checked-checkbox::after {
     background-color: rgb(1, 84, 1);
     left: 23px;
     content: "";
